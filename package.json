@@ -1,0 +1,23 @@
+{
+  "name": "a-rxjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MNPCMW6444/a-rxjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MNPCMW6444/a-rxjs/issues"
+  },
+  "homepage": "https://github.com/MNPCMW6444/a-rxjs#readme",
+  "dependencies": {
+    "rxjs": "^7.5.6"
+  }
+}
