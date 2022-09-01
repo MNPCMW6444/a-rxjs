@@ -18,28 +18,28 @@ let relativeTime = new Date().getSeconds() - startTime;
 let diff, last;
 last = relativeTime;
 
-a.pipe(
-  Rxjs.switchMap((x) =>
-    b.pipe(
-      Rxjs.map((m) => {
-        relativeTime = new Date().getSeconds() - startTime;
-        diff = relativeTime - last;
-        last = relativeTime;
-        return (
-          (relativeTime < 10 ? "0" + relativeTime : relativeTime) +
-          "(+" +
-          diff +
-          "):  x  *  m   =   " +
-          x +
-          "  *  " +
-          m +
-          "  =  " +
-          x * m
-        );
-      })
-    )
-  )
-).subscribe(console.log);
+// a.pipe(
+//   Rxjs.switchMap((x) =>
+//     b.pipe(
+//       Rxjs.map((m) => {
+//         relativeTime = new Date().getSeconds() - startTime;
+//         diff = relativeTime - last;
+//         last = relativeTime;
+//         return (
+//           (relativeTime < 10 ? "0" + relativeTime : relativeTime) +
+//           "(+" +
+//           diff +
+//           "):  x  *  m   =   " +
+//           x +
+//           "  *  " +
+//           m +
+//           "  =  " +
+//           x * m
+//         );
+//       })
+//     )
+//   )
+// ).subscribe(console.log);
 
 a.pipe(
   Rxjs.mergeMap((x) =>
