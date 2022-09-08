@@ -41,39 +41,39 @@ last = relativeTime;
 //   )
 // ).subscribe(console.log);
 
-a.pipe(
-  Rxjs.mergeMap((x) =>
-    b.pipe(
-      Rxjs.map((m) => {
-        relativeTime = new Date().getSeconds() - startTime;
-        diff = relativeTime - last;
-        last = relativeTime;
-        return (
-          (relativeTime < 10 ? "0" + relativeTime : relativeTime) +
-          "(+" +
-          diff +
-          "):  x  *  m   =   " +
-          x +
-          "  *  " +
-          m +
-          "  =  " +
-          x * m
-        );
-      })
-    )
-  )
-).subscribe(console.log);
+// a.pipe(
+//   Rxjs.mergeMap((x) =>
+//     b.pipe(
+//       Rxjs.map((m) => {
+//         relativeTime = new Date().getSeconds() - startTime;
+//         diff = relativeTime - last;
+//         last = relativeTime;
+//         return (
+//           (relativeTime < 10 ? "0" + relativeTime : relativeTime) +
+//           "(+" +
+//           diff +
+//           "):  x  *  m   =   " +
+//           x +
+//           "  *  " +
+//           m +
+//           "  =  " +
+//           x * m
+//         );
+//       })
+//     )
+//   )
+// ).subscribe(console.log);
 
-//Rxjs.combineLatest(a, b).subscribe(console.log);
+// Rxjs.combineLatest(a, b).subscribe(console.log);
 
-//a.pipe(Rxjs.withLatestFrom(b)).subscribe(console.log);
+// a.pipe(Rxjs.withLatestFrom(b)).subscribe(console.log);
 
-//a.pipe(Rxjs.tap(console.log)).subscribe((x) => console.log("wow:" + x));
+// a.pipe(Rxjs.tap(console.log)).subscribe((x) => console.log("wow:" + x));
 
-//a.pipe(Rxjs.first()).subscribe(console.log);
+// a.pipe(Rxjs.first()).subscribe(console.log);
 
-//a.pipe(Rxjs.map((x) => "wow:" + x)).subscribe(console.log);
+// a.pipe(Rxjs.map((x) => "wow:" + x)).subscribe(console.log);
 
-//a.pipe(Rxjs.take(2)).subscribe(console.log);
+// a.pipe(Rxjs.take(2)).subscribe(console.log);
 
-//a.pipe(Rxjs.filter((x) => x > 1)).subscribe(console.log);
+a.pipe(Rxjs.filter((x) => x > 1)).subscribe(console.log);
